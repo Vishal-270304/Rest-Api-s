@@ -1,4 +1,5 @@
 // const express = require("express")
+import cors from "cors"
 import env from "dotenv/config"
 import express from "express"
 const app = express()
@@ -8,6 +9,8 @@ import connectDB from "./db/connect.js";
 // const product_routes = require('./routes/products')
 
 // env.config()
+
+app.use(cors())
 
 app.get("/",(req,res)=>{
 res.send("Hello")
